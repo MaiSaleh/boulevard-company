@@ -246,3 +246,48 @@ nav a:hover{
   font-size:16px;
   line-height:1.7;
 }
+.why-us{
+  padding:80px 0;
+  background:#1f1f1f;
+  color:white;
+}
+
+.why-us-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.why-us-text h2{
+  font-size:36px;
+  margin:10px 0 20px;
+  color:white;
+}
+
+.why-us-text p{
+  color:#d6d6d6;
+  font-size:17px;
+  line-height:1.8;
+}
+
+.why-us-features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.feature-box{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.feature-box:hover{
+  background:rgba(255,255,255,0.14);
+  transform:translateY(-4px);
+}
