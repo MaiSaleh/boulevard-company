@@ -151,3 +151,43 @@ nav a:hover{
   margin-bottom:15px;
   line-height:1.8;
 }
+.services{
+  padding:80px 0;
+  background:#f9f9f9;
+}
+
+.services-title{
+  font-size:36px;
+  margin:10px 0 30px;
+  color:#1f1f1f;
+}
+
+.services-container{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:20px;
+}
+
+.service-card{
+  background:white;
+  padding:25px 20px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-5px);
+}
+
+.service-card h3{
+  font-size:22px;
+  margin-bottom:12px;
+  color:#c9a961;
+}
+
+.service-card p{
+  color:#666;
+  font-size:16px;
+  line-height:1.7;
+}
