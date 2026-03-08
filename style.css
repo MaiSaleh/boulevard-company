@@ -1,7 +1,14 @@
+/* =========================
+   Global Styles
+========================= */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
@@ -16,15 +23,48 @@ a{
   color:inherit;
 }
 
+img{
+  width:100%;
+  display:block;
+}
+
 .container{
   width:90%;
   max-width:1200px;
   margin:auto;
 }
+
+/* =========================
+   Floating WhatsApp
+========================= */
+.floating-whatsapp{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#25D366;
+  color:white;
+  padding:14px 18px;
+  border-radius:50px;
+  font-weight:bold;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+  z-index:1000;
+  transition:0.3s;
+}
+
+.floating-whatsapp:hover{
+  transform:translateY(-3px);
+}
+
+/* =========================
+   Header / Navbar
+========================= */
 header{
   background:white;
   border-bottom:1px solid #e5e5e5;
   padding:20px 0;
+  position:sticky;
+  top:0;
+  z-index:999;
 }
 
 .navbar{
@@ -57,6 +97,10 @@ nav a{
 nav a:hover{
   color:#c9a961;
 }
+
+/* =========================
+   Hero Section
+========================= */
 .hero{
   padding:80px 0;
   background:#f9f9f9;
@@ -83,10 +127,11 @@ nav a:hover{
   font-size:18px;
   color:#666;
   margin-bottom:25px;
-  line-height:1.6;
+  line-height:1.8;
 }
 
 .hero-btn{
+  display:inline-block;
   background:#c9a961;
   color:white;
   padding:12px 24px;
@@ -104,9 +149,25 @@ nav a:hover{
 }
 
 .hero-image img{
-  width:100%;
   border-radius:12px;
+  height:420px;
+  object-fit:cover;
 }
+
+/* =========================
+   Shared Section Styles
+========================= */
+.section-subtitle{
+  display:inline-block;
+  color:#c9a961;
+  font-weight:bold;
+  margin-bottom:10px;
+  font-size:15px;
+}
+
+/* =========================
+   About Section
+========================= */
 .about{
   padding:80px 0;
   background:white;
@@ -123,20 +184,13 @@ nav a:hover{
 }
 
 .about-image img{
-  width:100%;
   border-radius:12px;
+  height:400px;
+  object-fit:cover;
 }
 
 .about-text{
   flex:1;
-}
-
-.section-subtitle{
-  display:inline-block;
-  color:#c9a961;
-  font-weight:bold;
-  margin-bottom:10px;
-  font-size:15px;
 }
 
 .about-text h2{
@@ -151,6 +205,10 @@ nav a:hover{
   margin-bottom:15px;
   line-height:1.8;
 }
+
+/* =========================
+   Services Section
+========================= */
 .services{
   padding:80px 0;
   background:#f9f9f9;
@@ -191,6 +249,10 @@ nav a:hover{
   font-size:16px;
   line-height:1.7;
 }
+
+/* =========================
+   Projects Section
+========================= */
 .projects{
   padding:80px 0;
   background:white;
@@ -225,10 +287,8 @@ nav a:hover{
 }
 
 .project-image img{
-  width:100%;
   height:100%;
   object-fit:cover;
-  display:block;
 }
 
 .project-content{
@@ -246,6 +306,46 @@ nav a:hover{
   font-size:16px;
   line-height:1.7;
 }
+
+/* =========================
+   Gallery Section
+========================= */
+.gallery{
+  padding:80px 0;
+  background:#f9f9f9;
+}
+
+.gallery-title{
+  font-size:36px;
+  margin:10px 0 30px;
+  color:#1f1f1f;
+}
+
+.gallery-container{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+
+.gallery-item{
+  overflow:hidden;
+  border-radius:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.gallery-item img{
+  height:260px;
+  object-fit:cover;
+  transition:0.4s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.08);
+}
+
+/* =========================
+   Why Us Section
+========================= */
 .why-us{
   padding:80px 0;
   background:#1f1f1f;
@@ -291,6 +391,10 @@ nav a:hover{
   background:rgba(255,255,255,0.14);
   transform:translateY(-4px);
 }
+
+/* =========================
+   Contact Section
+========================= */
 .contact{
   padding:80px 0;
   background:#f9f9f9;
@@ -392,9 +496,10 @@ nav a:hover{
 .contact-form button:hover{
   background:#b3924d;
 }
-html{
-  scroll-behavior:smooth;
-}
+
+/* =========================
+   Footer
+========================= */
 .footer{
   background:#151515;
   color:white;
@@ -439,13 +544,18 @@ html{
   font-size:14px;
 }
 
+/* =========================
+   Responsive Design
+========================= */
 @media(max-width:992px){
   .hero-container,
-  .about-container,
+  .about-container{
+    flex-direction:column;
+  }
+
   .why-us-container,
   .contact-container{
     grid-template-columns:1fr;
-    display:grid;
   }
 
   .services-container{
@@ -455,9 +565,10 @@ html{
   .projects-container{
     grid-template-columns:repeat(2, 1fr);
   }
+
   .gallery-container{
-  grid-template-columns:repeat(2,1fr);
-}
+    grid-template-columns:repeat(2, 1fr);
+  }
 }
 
 @media(max-width:768px){
@@ -468,7 +579,6 @@ html{
   }
 
   nav{
-    display:flex;
     flex-wrap:wrap;
     gap:12px;
   }
@@ -477,6 +587,7 @@ html{
   .about-text h2,
   .services-title,
   .projects-title,
+  .gallery-title,
   .why-us-text h2,
   .contact-info h2{
     font-size:30px;
@@ -484,6 +595,7 @@ html{
 
   .services-container,
   .projects-container,
+  .gallery-container,
   .why-us-features{
     grid-template-columns:1fr;
   }
@@ -492,58 +604,9 @@ html{
     flex-direction:column;
     align-items:flex-start;
   }
-  .gallery-container{
-  grid-template-columns:1fr;
-}
-}
-.floating-whatsapp{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:#25D366;
-  color:white;
-  padding:14px 18px;
-  border-radius:50px;
-  font-weight:bold;
-  box-shadow:0 4px 12px rgba(0,0,0,0.2);
-  z-index:1000;
-  transition:0.3s;
-}
 
-.floating-whatsapp:hover{
-  transform:translateY(-3px);
-}
-.gallery{
-  padding:80px 0;
-  background:white;
-}
-
-.gallery-title{
-  font-size:36px;
-  margin:10px 0 30px;
-  color:#1f1f1f;
-}
-
-.gallery-container{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:20px;
-}
-
-.gallery-item{
-  overflow:hidden;
-  border-radius:14px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
-
-.gallery-item img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  display:block;
-  transition:0.4s;
-}
-
-.gallery-item:hover img{
-  transform:scale(1.08);
+  .hero-image img,
+  .about-image img{
+    height:auto;
+  }
 }
