@@ -924,10 +924,3 @@ grid-template-columns:1fr;
     font-size:28px;
   }
 }
-.gallery-item a{
-  display:block;
-}
-
-.gallery-item img{
-  cursor:pointer;
-}
