@@ -76,17 +76,32 @@ header{
   justify-content:space-between;
   align-items:center;
 }
-
-.logo h1{
-  font-size:28px;
-  color:#c9a961;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
-.logo p{
+.logo img{
+  width:62px;
+  height:62px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.logo-text h1{
+  font-size:28px;
+  color:#d4af37;
+  margin:0;
+  line-height:1.1;
+}
+
+.logo-text p{
   font-size:14px;
   color:#777;
+  margin:4px 0 0;
+  line-height:1.4;
 }
-
 nav{
   display:flex;
   gap:20px;
