@@ -220,6 +220,7 @@ nav a.active::after{
   nav a{
     font-size:15px;
   }
+  
 }
 
 /* =========================
@@ -1060,14 +1061,14 @@ nav a.active::after{
   .hero-text h2,
   .about-text h2,
   .why-us-text h2{
-    font-size:32px;
+    font-size:28px;
   }
 
   .page-title,
   .services-title,
   .projects-title,
   .section-main-title{
-    font-size:30px;
+    font-size:24px;
   }
 
   .hero-text p,
