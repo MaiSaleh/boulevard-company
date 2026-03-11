@@ -666,6 +666,7 @@ nav a.active::after{
 
 .contact-form button:hover{
   background:#bf9b2e;
+  
 }
 
 /* =========================
@@ -974,9 +975,12 @@ nav a.active::after{
 }
 
 .footer-bottom{
+  
   border-top:1px solid rgba(255,255,255,0.08);
+  padding:14px 0;
   text-align:center;
-  padding:12px 0;
+  display:flex;
+  
 }
 
 .footer-bottom p{
