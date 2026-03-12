@@ -474,6 +474,7 @@ nav a.active::after{
   height:220px;
   object-fit:cover;
   display:block;
+  border-radius: 14px;
 }
 
 .project-content{
@@ -1211,4 +1212,34 @@ nav a.active::after{
 .why-us-text h2,
 .contact-info h2{
   font-weight: 700;
+}
+#scrollTopBtn{
+position:fixed;
+bottom:90px;
+right:20px;
+width:45px;
+height:45px;
+background:#d4af37;
+color:#1f1f1f;
+border:none;
+border-radius:50%;
+font-size:22px;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+box-shadow:0 6px 16px rgba(0,0,0,0.2);
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+z-index:999;
+}
+
+#scrollTopBtn.show{
+opacity:1;
+pointer-events:auto;
+}
+
+#scrollTopBtn:hover{
+background:#bf9b2e;
 }
