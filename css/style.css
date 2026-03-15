@@ -570,30 +570,9 @@ nav a.active::after{
   margin-bottom:14px;
 }
 
-.contact-details{
-  margin-top:18px;
-}
-
 .contact-details p{
   margin-bottom:10px;
   font-size:15px;
-}
-.contact-item span{
-direction:ltr;
-unicode-bidi:embed;
-display: inline-block;
-}
-
-.contact-item{
-margin-bottom:14px;
-font-size:16px;
-line-height: 1.8;
-}
-
-.contact-label{
-font-weight:700;
-margin-left:8px;
-color:#444;
 }
 
 .social-buttons{
@@ -603,6 +582,36 @@ color:#444;
   flex-wrap:wrap;
 }
 
+.contact-details{
+margin-top:20px;
+}
+
+.contact-item{
+background:#ffffff;
+padding:12px 16px;
+margin-bottom:12px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+font-size:16px;
+line-height:1.7;
+transition:0.3s;
+}
+
+.contact-item:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 18px rgba(0,0,0,0.08);
+}
+
+.contact-label{
+font-weight:700;
+color:#333;
+margin-left:6px;
+}
+
+.contact-item span[dir="ltr"]{
+direction:ltr;
+unicode-bidi:embed;
+}
 .social-btn{
   display:inline-flex;
   align-items:center;
