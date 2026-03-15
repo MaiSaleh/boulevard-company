@@ -578,6 +578,23 @@ nav a.active::after{
   margin-bottom:10px;
   font-size:15px;
 }
+.contact-item span{
+direction:ltr;
+unicode-bidi:embed;
+display: inline-block;
+}
+
+.contact-item{
+margin-bottom:14px;
+font-size:16px;
+line-height: 1.8;
+}
+
+.contact-label{
+font-weight:700;
+margin-left:8px;
+color:#444;
+}
 
 .social-buttons{
   display:flex;
