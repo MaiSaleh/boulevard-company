@@ -1243,3 +1243,31 @@ pointer-events:auto;
 #scrollTopBtn:hover{
 background:#bf9b2e;
 }
+.projects-filter{
+text-align:center;
+margin-bottom:40px;
+}
+
+.filter-btn{
+padding:10px 18px;
+border:none;
+margin:6px;
+background:#eee;
+cursor:pointer;
+border-radius:20px;
+font-weight:600;
+transition:0.3s;
+}
+
+.filter-btn:hover{
+background:#d4af37;
+color:white;
+}
+
+.filter-btn.active{
+background:#d4af37;
+color:white;
+}
+.project-showcase-card{
+  transition:0.4s ease;
+}

@@ -44,12 +44,18 @@
     </div>
   </section>
 
-  <section class="projects-showcase">
-  
+  <div class="projects-filter">
+  <button class="filter-btn active" onclick="filterProjects('all', this)">الكل</button>
+  <button class="filter-btn" onclick="filterProjects('interior', this)">ديكور داخلي</button>
+  <button class="filter-btn" onclick="filterProjects('restaurant', this)">مطاعم</button>
+  <button class="filter-btn" onclick="filterProjects('marble', this)">رخام</button>
+  <button class="filter-btn" onclick="filterProjects('water', this)">نوافير</button>
+  <button class="filter-btn" onclick="filterProjects('outdoor', this)">أعمال خارجية</button>
+</div>
   <div class="container projects-showcase-grid">
 
-    <div class="project-showcase-card">
-      <a href="images/bedrom-1.jpeg" data-lightbox="bedroom" class="project-showcase-image">
+<div class="project-showcase-card" data-category="interior">
+        <a href="images/bedrom-1.jpeg" data-lightbox="bedroom" class="project-showcase-image">
         <img src="images/bedrom-1.jpeg" alt="ديكور داخلي فاخر">
       </a>
       <div class="project-showcase-content">
@@ -67,8 +73,8 @@
       </div>
     </div>
 
-    <div class="project-showcase-card">
-      <a href="images/marble works1.jpeg" data-lightbox="marble" class="project-showcase-image">
+<div class="project-showcase-card" data-category="marble">
+        <a href="images/marble works1.jpeg" data-lightbox="marble" class="project-showcase-image">
         <img src="images/marble works1.jpeg" alt="أعمال الرخام">
       </a>
       <div class="project-showcase-content">
@@ -88,8 +94,8 @@
       </div>
     </div>
 
-    <div class="project-showcase-card">
-      <a href="images/salon m1.jpeg" data-lightbox="salon" class="project-showcase-image">
+<div class="project-showcase-card" data-category="interior">
+        <a href="images/salon m1.jpeg" data-lightbox="salon" class="project-showcase-image">
         <img src="images/salon m1.jpeg" alt="ديكور داخلي فاخر">
       </a>
       <div class="project-showcase-content">
@@ -107,8 +113,8 @@
       </div>
     </div>
 
-    <div class="project-showcase-card">
-      <a href="images/water fountains.jpeg" data-lightbox="water-fountains" class="project-showcase-image">
+<div class="project-showcase-card" data-category="water">
+        <a href="images/water fountains.jpeg" data-lightbox="water-fountains" class="project-showcase-image">
         <img src="images/water fountains.jpeg" alt="نوافير وبحيرات">
       </a>
       <div class="project-showcase-content">
@@ -126,8 +132,8 @@
       </div>
     </div>
 
-    <div class="project-showcase-card">
-      <a href="images/link lounge 1.jpeg" data-lightbox="link-lounge" class="project-showcase-image">
+<div class="project-showcase-card" data-category="interior">
+        <a href="images/link lounge 1.jpeg" data-lightbox="link-lounge" class="project-showcase-image">
         <img src="images/link lounge 1.jpeg" alt="تنفيذ متكامل">
       </a>
       <div class="project-showcase-content">
@@ -144,8 +150,8 @@
       </div>
     </div>
 
-    <div class="project-showcase-card">
-      <a href="images/outdoor 1.jpeg" data-lightbox="outdoor" class="project-showcase-image">
+<div class="project-showcase-card" data-category="outdoor">
+        <a href="images/outdoor 1.jpeg" data-lightbox="outdoor" class="project-showcase-image">
         <img src="images/outdoor 1.jpeg" alt="أعمال خارجية">
       </a>
       <div class="project-showcase-content">
@@ -163,7 +169,7 @@
       </div>
     </div>
 
-    <div class="project-showcase-card">
+<div class="project-showcase-card" data-category="interior">
       <a href="images/stairs1.jpeg" data-lightbox="stairs" class="project-showcase-image">
         <img src="images/stairs1.jpeg" alt="تصميم درج داخلي أنيق">
       </a>
@@ -182,8 +188,8 @@
       </div>
     </div>
 
-    <div class="project-showcase-card">
-      <a href="images/kaaka-wnos1.jpeg" data-lightbox="restaurant" class="project-showcase-image">
+<div class="project-showcase-card" data-category="restaurant">
+        <a href="images/kaaka-wnos1.jpeg" data-lightbox="restaurant" class="project-showcase-image">
         <img src="images/kaaka-wnos1.jpeg" alt="تصميم مطعم كعكة ونص">
       </a>
       <div class="project-showcase-content">
@@ -203,10 +209,6 @@
 
   </div>
 </section>
-
-
-
-
 
 <footer class="footer">
   <div class="container footer-container">
@@ -269,6 +271,25 @@ AOS.init({
 </button>
 <script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox-plus-jquery.min.js"></script>
+<script>
+  function filterProjects(category, clickedBtn) {
+    const projects = document.querySelectorAll(".project-showcase-card");
+    const buttons = document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+    clickedBtn.classList.add("active");
+
+    projects.forEach(project => {
+      const projectCategory = project.getAttribute("data-category");
+
+      if (category === "all" || projectCategory === category) {
+        project.style.display = "block";
+      } else {
+        project.style.display = "none";
+      }
+    });
+  }
+</script>
 </body>
 </html>
 </body>
