@@ -179,6 +179,38 @@
       </div>
     </div>
   </section>
+<!--TESTIMONAILS-->
+
+  <section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <h2 class="section-title">Client Reviews</h2>
+    <p class="section-subtitle">What our clients say about us</p>
+
+    <div id="reviews-list" class="reviews-grid"></div>
+
+    <div class="review-form-wrapper">
+      <h3>Share Your Review</h3>
+
+      <form id="review-form" class="review-form">
+        <input type="text" id="review-name" placeholder="Your Name" required />
+
+        <select id="review-rating" required>
+          <option value="">Select Rating</option>
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="2">2 Stars</option>
+          <option value="1">1 Star</option>
+        </select>
+
+        <textarea id="review-message" rows="5" placeholder="Write your review..." required></textarea>
+
+        <button type="submit">Submit Review</button>
+        <p id="form-message"></p>
+      </form>
+    </div>
+  </div>
+</section>
 
   <!-- Why Us -->
   <section class="why-us">
@@ -323,5 +355,7 @@ AOS.init({
 <i class='bx bx-up-arrow-alt'></i>
 </button>
 <script src="js/main.js"></script>
+<script type="module" src="reviews.js"></script>
+
 </body>
 </html>
